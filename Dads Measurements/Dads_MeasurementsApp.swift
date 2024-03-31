@@ -11,7 +11,23 @@ import SwiftUI
 struct Dads_MeasurementsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                TriangleView()
+                    .tabItem {
+                        Symbols.triangle
+                        Text("Triangle")
+                    }
+                Text("Rectangle measurement")
+                    .tabItem {
+                        Symbols.rectangle
+                        Text("Rectangle")
+                    }
+                Text("Circle measurement")
+                    .tabItem {
+                        Symbols.circle
+                        Text("Circle")
+                    }
+            }
         }
     }
 }
